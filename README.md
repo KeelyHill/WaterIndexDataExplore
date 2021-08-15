@@ -1,9 +1,8 @@
-
 # About
 
 A personal data exploration of data collection from [Water-indexed benefits and impacts of California almonds](https://www.sciencedirect.com/science/article/pii/S1470160X17308592) using data in the ["Supplemental Information"](https://ars.els-cdn.com/content/image/1-s2.0-S1470160X17308592-mmc1.pdf) PDF.
 
-I liked some of the charts included in the paper, but felt like more were needed to understand the absolutes of the data, not just ranking. I was interested in the total nutritional value as the resource instead of market value.
+Read about the project [here](//keelyhill.com/2021/08/21-08-nutrition-versus-water-footprint/).
 
 # Full Data Citation
 
@@ -25,3 +24,6 @@ extract_from_pdf
     /        \
  merge       pivot
 ```
+
+# License
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

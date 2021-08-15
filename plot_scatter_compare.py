@@ -3,13 +3,13 @@ import pandas as pd
 from numpy import arange, nan
 
 df = pd.read_csv('data/total_nutrient.csv')
-nutrient_total_keys = ['2014 Total Protein (Kg)','2014 Total Fiber (Kg)','2014 Total Vitamin A (mg)','2014 Total Vitamin C (g)','2014 Total Vitamin E (g)','2014 Total Calcium (g)','2014 Total Iron (g)','2014 Total Magnesium (g)','2014 Total Potassium (g)','2014 Total Saturated Fat (Kg)','2014 Total Sodium (g)']
+nutrient_total_keys = ['2014 Total Protein (g)','2014 Total Fiber (g)','2014 Total Vitamin A (mg)','2014 Total Vitamin C (g)','2014 Total Vitamin E (g)','2014 Total Calcium (g)','2014 Total Iron (mg)','2014 Total Magnesium (g)','2014 Total Potassium (g)','2014 Total Saturated Fat (g)','2014 Total Sodium (g)']
 
 normalized = { 'Crop': df['Crop']}
 normalized_names = []
 
 for nutrient in nutrient_total_keys:
-    name = nutrient.replace('2014 Total', '').replace('(Kg)', '').replace('(g)', '').replace('(mg)', '')
+    name = nutrient.replace('2014 Total', '').replace('(g)', '').replace('(mg)', '')
     normalized_names.append(name)
     normalized[name] = df[nutrient+'/m3_of_water'] / df[nutrient+'/m3_of_water'].max()
 
@@ -37,5 +37,5 @@ plt.xlabel("Nutrient per 1kL / max(Nutrient per 1kL)", size=14)
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 
 # fig.tight_layout() 
-plt.savefig('figures/scatter_compare_water_efficiency.png', bbox_inches='tight', dpi=200, transparent=False)
+plt.savefig('figures/wi_scatter_compare_water_efficiency.png', bbox_inches='tight', dpi=200, transparent=False)
 # plt.show()

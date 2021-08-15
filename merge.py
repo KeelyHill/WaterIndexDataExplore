@@ -54,20 +54,20 @@ tonnes_series = mdf['2014 Production (tonnes)']
 # This ratio mutliplied by total mass gives total nutrient mass.
 
 #                                          total tones of crop  | nutrient                 | to g  | to ratio | tonnes to ?g
-total_nutrient['2014 Total Protein (Kg)']       = ( tonnes_series * ( mdf['Protein (g)']       / 1      / 100 ) * 1e3  )
-total_nutrient['2014 Total Fiber (Kg)']         = ( tonnes_series * ( mdf['Fiber (g)']         / 1      / 100 ) * 1e3  )
+total_nutrient['2014 Total Protein (g)']       = ( tonnes_series * ( mdf['Protein (g)']       / 1      / 100 ) * 1e6  )
+total_nutrient['2014 Total Fiber (g)']         = ( tonnes_series * ( mdf['Fiber (g)']         / 1      / 100 ) * 1e6  )
 total_nutrient['2014 Total Vitamin A (mg)']     = ( tonnes_series * ( mdf['Vitamin A (μg)']    / 1e6    / 100 ) * 1e9  )
 total_nutrient['2014 Total Vitamin C (g)']     = ( tonnes_series * ( mdf['Vitamin C (mg)']    / 1e3    / 100 ) * 1e6  )
 total_nutrient['2014 Total Vitamin E (g)']     = ( tonnes_series * ( mdf['Vitamin E (mg)']    / 1e3    / 100 ) * 1e6  )
 total_nutrient['2014 Total Calcium (g)']       = ( tonnes_series * ( mdf['Calcium (mg)']      / 1e3    / 100 ) * 1e6  )
-total_nutrient['2014 Total Iron (g)']          = ( tonnes_series * ( mdf['Iron (mg)']         / 1e3    / 100 ) * 1e6  )
+total_nutrient['2014 Total Iron (mg)']          = ( tonnes_series * ( mdf['Iron (mg)']         / 1e3    / 100 ) * 1e9  )
 total_nutrient['2014 Total Magnesium (g)']     = ( tonnes_series * ( mdf['Magnesium (mg)']    / 1e3    / 100 ) * 1e6  )
 total_nutrient['2014 Total Potassium (g)']     = ( tonnes_series * ( mdf['Potassium (mg)']    / 1e3    / 100 ) * 1e6  )
-total_nutrient['2014 Total Saturated Fat (Kg)'] = ( tonnes_series * ( mdf['Saturated Fat (g)'] / 1      / 100 ) * 1e3  )
+total_nutrient['2014 Total Saturated Fat (g)'] = ( tonnes_series * ( mdf['Saturated Fat (g)'] / 1      / 100 ) * 1e6  )
 total_nutrient['2014 Total Sodium (g)']        = ( tonnes_series * ( mdf['Sodium (mg)']       / 1e3    / 100 ) * 1e6  )
 
 
-nutrient_total_keys = ['2014 Total Protein (Kg)','2014 Total Fiber (Kg)','2014 Total Vitamin A (mg)','2014 Total Vitamin C (g)','2014 Total Vitamin E (g)','2014 Total Calcium (g)','2014 Total Iron (g)','2014 Total Magnesium (g)','2014 Total Potassium (g)','2014 Total Saturated Fat (Kg)','2014 Total Sodium (g)']
+nutrient_total_keys = ['2014 Total Protein (g)','2014 Total Fiber (g)','2014 Total Vitamin A (mg)','2014 Total Vitamin C (g)','2014 Total Vitamin E (g)','2014 Total Calcium (g)','2014 Total Iron (mg)','2014 Total Magnesium (g)','2014 Total Potassium (g)','2014 Total Saturated Fat (g)','2014 Total Sodium (g)']
 
 for metric in nutrient_total_keys:
     total_nutrient[metric + '/m3_of_water'] = total_nutrient[metric] / mdf['2014 Water Footprint (cubic meters)']

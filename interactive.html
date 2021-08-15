@@ -1,6 +1,6 @@
 <html>
-
 <head>
+    <title>Interactive Exploration Crop's water footprint.</title>
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -12,10 +12,6 @@
 </div>
 <div style="height: 30%;">
     <canvas id="totalWaterPie">Your browser does not support the canvas element.</canvas>
-</div>
-
-<div style="height: 30%;">
-    <canvas id="percentScatterChart">Your browser does not support the canvas element.</canvas>
 </div>
 
 <script>
@@ -152,69 +148,6 @@
     });
 
 
-    //////////////////
-
-    var percent_bar_ctx = document.getElementById('percentScatterChart').getContext('2d');
-    var percentScatterChart = new Chart(percent_bar_ctx, {
-        type: 'scatter',
-
-        data: {
-            // labels: json_full_merged_pivot['columns'],
-            // labels: ["Label 1", "Label 2", "Label 3"],
-            datasets: [
-                {
-                    label: 'Apple',
-                    data: [{ x: 10, y: 20, crop:'toody'}]
-                },
-                {
-                    label: 'Banana',
-                    data: [{ x: 5, y: 5 },]
-                }
-            ]
-        },
-
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-
-
-            scales: {
-                y: {
-                    beginAtZero: true
-                },
-                x: {
-                    beginAtZero: true
-                }
-            },
-
-            plugins: {
-                title: {
-                    display: true,
-                    text: ''
-                },
-
-                legend: {
-                    display: true,
-                    position: 'left',
-                },
-
-                tooltip: {
-                    callbacks: {
-                        label: function (tooltipItem) {
-                            // var label = tooltipItem.dataset.label;
-                            var label = tooltipItem.raw.crop;
-                            return label + ': (' + tooltipItem.parsed.x + ', ' + tooltipItem.parsed.y + ')';
-                        }
-                    }
-                },
-            },
-        }
-    });
-
-
-
-
 </script>
-
 
 </html>
