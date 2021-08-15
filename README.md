@@ -6,15 +6,15 @@ Read about the project [here](//keelyhill.com/2021/08/21-08-nutrition-versus-wat
 
 # Full Data Citation
 
-Julian Fulton, Michael Norton, Fraser Shilling,
-Water-indexed benefits and impacts of California almonds,
-Ecological Indicators,
-Volume 96, Part 1,
-2019,
-Pages 711-717,
-ISSN 1470-160X,
-https://doi.org/10.1016/j.ecolind.2017.12.063.
-(https://www.sciencedirect.com/science/article/pii/S1470160X17308592)
+Julian Fulton, Michael Norton, Fraser Shilling,  
+Water-indexed benefits and impacts of California almonds,  
+Ecological Indicators,  
+Volume 96, Part 1,  
+2019,  
+Pages 711-717,  
+ISSN 1470-160X,  
+https://doi.org/10.1016/j.ecolind.2017.12.063.  
+(https://www.sciencedirect.com/science/article/pii/S1470160X17308592)  
 
 # Data cleanup flow
 ```
